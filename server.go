@@ -87,9 +87,6 @@ func getProductById(c *gin.Context) {
 		fmt.Println(err.Error())
 		return
 	}
-
-	// Loop through the list of products, looking for
-	// an album whose ID value matches the parameter.
 	for _, a := range products {
 		if a.ID == id {
 			c.IndentedJSON(http.StatusOK, a)
